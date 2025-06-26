@@ -1,0 +1,85 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const testimonials = [
+  { image: "female.png", name: "Alice", text: "This service changed my life!" },
+  { image: "male.png", name: "Bob", text: "Absolutely wonderful experience." },
+  { image: "male.png", name: "Charlie", text: "Professional and efficient team." },
+  { image: "female.png", name: "Diana", text: "Exceeded my expectations!" },
+  { image: "male.png", name: "Evan", text: "Great support and fast delivery." },
+];
+
+export default function TestimonialSlider() {
+  const [index, setIndex] = useState(0);
+
+const next = () => setIndex((prev: number) => (prev + 1) % testimonials.length);
+const prev = () => setIndex((prev: number) => (prev - 1 + testimonials.length) % testimonials.length);
+
+
+  return (
+    <div id="testimoni" className="flex flex-col items-center justify-center mt-30 px-4">
+      <h1 className="text-[40px] text-[#2E4057] font-bold mb-10 text-center">
+        What People Are Saying 💬
+      </h1>
+
+      {/* Container with fixed width to avoid buttons being cut off */}
+      <div className="relative w-[90vw] max-w-md h-[250px] overflow-visible">
+        {/* LEFT BUTTON */}
+        <button
+          onClick={prev}
+          className="absolute left-2 sm:left-[-60px] top-1/2 -translate-y-1/2 bg-white border border-black p-2 rounded-full shadow z-10 hover:scale-110 transition"
+        >
+          ◀
+        </button>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -300, opacity: 0 }}
+            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+            className="absolute w-full h-full flex items-center justify-center"
+          >
+            <motion.div
+              animate={{
+                rotate: [0, 1.5, -1.5, 1.5, 0],
+                x: [0, 1.2, -1.2, 1.2, 0],
+                scale: [1, 1.01, 1, 0.99, 1],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="bg-[#FFD166] border border-black rounded-2xl p-8 shadow-lg w-full h-full flex flex-col items-center justify-center text-center"
+            >
+              <Image
+                src={testimonials[index].image}
+                alt={testimonials[index].name}
+                className="w-16 h-16 rounded-full mb-4 object-cover"
+              />
+              <h2 className="text-[32px] font-bold text-[#2E4057] mb-3">
+                {testimonials[index].name}
+              </h2>
+              <p className="text-[26px] text-[#A679B4] font-medium [-webkit-text-stroke:0.3px_black]">
+                {testimonials[index].text}
+              </p>
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* RIGHT BUTTON */}
+        <button
+          onClick={next}
+          className="absolute right-2 sm:right-[-60px] top-1/2 -translate-y-1/2 bg-white border border-black p-2 rounded-full shadow z-10 hover:scale-110 transition"
+        >
+          ▶
+        </button>
+      </div>
+    </div>
+  );
+}

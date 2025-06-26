@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 @import "tailwindcss";
 
-:root {
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +25,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+@theme {
+  /* Definisikan keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Buat variabel animasi */
+  --animate-float: float 2s ease-in-out infinite;
+}
+
+@layer utilities {
+  @keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-wave {
+    animation: wave 1s ease-in-out forwards;
+  }
+}
+
+body{
+  background-color: #FFF8DC;
+  font-family: 'Fraunces'
 }

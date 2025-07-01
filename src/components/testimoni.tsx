@@ -5,19 +5,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
-  { image: "female.png", name: "Alice", text: "This service changed my life!" },
-  { image: "male.png", name: "Bob", text: "Absolutely wonderful experience." },
-  { image: "male.png", name: "Charlie", text: "Professional and efficient team." },
-  { image: "female.png", name: "Diana", text: "Exceeded my expectations!" },
-  { image: "male.png", name: "Evan", text: "Great support and fast delivery." },
+  { image: "/female.png", name: "Alice", text: "This service changed my life!" },
+  { image: "/male.png", name: "Bob", text: "Absolutely wonderful experience." },
+  { image: "/male.png", name: "Charlie", text: "Professional and efficient team." },
+  { image: "/female.png", name: "Diana", text: "Exceeded my expectations!" },
+  { image: "/male.png", name: "Evan", text: "Great support and fast delivery." },
 ];
 
 export default function TestimonialSlider() {
   const [index, setIndex] = useState(0);
 
-const next = () => setIndex((prev: number) => (prev + 1) % testimonials.length);
-const prev = () => setIndex((prev: number) => (prev - 1 + testimonials.length) % testimonials.length);
-
+  const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
+  const prev = () => setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
     <div id="testimoni" className="flex flex-col items-center justify-center mt-30 px-4">
@@ -25,7 +24,6 @@ const prev = () => setIndex((prev: number) => (prev - 1 + testimonials.length) %
         What People Are Saying 💬
       </h1>
 
-      {/* Container with fixed width to avoid buttons being cut off */}
       <div className="relative w-[90vw] max-w-md h-[250px] overflow-visible">
         {/* LEFT BUTTON */}
         <button
@@ -60,7 +58,9 @@ const prev = () => setIndex((prev: number) => (prev - 1 + testimonials.length) %
               <Image
                 src={testimonials[index].image}
                 alt={testimonials[index].name}
-                className="w-16 h-16 rounded-full mb-4 object-cover"
+                width={64}
+                height={64}
+                className="rounded-full mb-4 object-cover"
               />
               <h2 className="text-[32px] font-bold text-[#2E4057] mb-3">
                 {testimonials[index].name}

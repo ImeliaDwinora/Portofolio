@@ -20,23 +20,34 @@ export default function Contact() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center mt-16 px-6 mx-10 justify-center items-center mb-6">
         {/* Gambar Kiri */}
-        <div>
+        <div className="relative w-[300px] h-[300px] mx-auto md:w-[400px] md:h-[400px]">
           <Image
-            src="contact.png"
-            alt=""
-            className="rotate-[-7deg] hover:rotate-7 transition-transform duration-200 animate-float"
+            src="/contact.png"
+            alt="Contact Illustration"
+            fill
+            className="object-contain rotate-[-7deg] hover:rotate-7 transition-transform duration-200 animate-float"
           />
         </div>
 
         {/* Kontak Kanan */}
         <div className="relative w-full max-w-md mx-auto">
-          <Image src="box.png" alt="" className="w-full h-auto" />
+          {/* Background Box */}
+          <div className="relative w-full h-auto aspect-[4/3]">
+            <Image
+              src="/box.png"
+              alt="Box Background"
+              fill
+              className="object-contain"
+            />
+          </div>
 
           {/* Kontak 1 */}
-          <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-full px-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 z-10 text-[#2E4057] font-bold text-center ">
+          <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-full px-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 z-10 text-[#2E4057] font-bold text-center">
             <Image
-              src="app.png"
-              alt=""
+              src="/app.png"
+              alt="Phone Icon"
+              width={40}
+              height={40}
               className="w-[24px] h-[24px] md:w-[40px] md:h-[40px]"
             />
             <h1 className="text-sm md:text-2xl break-words">08117892303</h1>
@@ -45,8 +56,10 @@ export default function Contact() {
           {/* Kontak 2 */}
           <div className="absolute top-[58%] left-1/2 -translate-x-1/2 w-full px-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 z-10 text-[#2E4057] font-bold text-center">
             <Image
-              src="gmail.png"
-              alt=""
+              src="/gmail.png"
+              alt="Email Icon"
+              width={40}
+              height={40}
               className="w-[24px] h-[24px] md:w-[40px] md:h-[40px]"
             />
             <h1 className="text-sm md:text-2xl break-words">imeliadwinora@gmail.com</h1>

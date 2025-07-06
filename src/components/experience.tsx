@@ -43,7 +43,7 @@ export default function Experiences() {
   return (
     <div
       id="experience"
-      className="flex flex-col items-center justify-center mt-30 text-center gap-5"
+      className="flex flex-col items-center justify-center my-30 text-center gap-5"
       data-aos="fade-up"
     >
       <h1 className="text-[40px] md:text-[60px] text-[#2E4057] [-webkit-text-stroke:0.5px_black] leading-none mt-6 px-4">

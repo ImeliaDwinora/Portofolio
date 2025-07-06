@@ -13,12 +13,16 @@ export default function Contact() {
   }, []);
 
   return (
-    <div id="contactme" data-aos="fade-up">
+    <div
+      id="contactme"
+      data-aos="fade-up"
+      className="flex flex-col items-center justify-center px-4 min-h-screen"
+    >
       <h1 className="text-[40px] md:text-[60px] text-center text-[#2E4057] [-webkit-text-stroke:0.5px_black] leading-none my-20">
         Get in Touch 📞
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center mt-16 px-6 mx-10 justify-center items-center mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center  px-6 mx-10 justify-center items-center mb-6">
         {/* Gambar Kiri */}
         <div className="relative w-[300px] h-[300px] mx-auto md:w-[400px] md:h-[400px]">
           <Image
@@ -30,39 +34,65 @@ export default function Contact() {
         </div>
 
         {/* Kontak Kanan */}
-        <div className="relative w-full max-w-md mx-auto">
+        <div className="relative w-full max-w-md mx-auto aspect-[4/3]">
           {/* Background Box */}
-          <div className="relative w-full h-auto aspect-[4/3]">
-            <Image
-              src="/box.png"
-              alt="Box Background"
-              fill
-              className="object-contain"
-            />
-          </div>
+          <Image
+            src="/box.png"
+            alt="Box Background"
+            fill
+            className="object-contain"
+          />
 
-          {/* Kontak 1 */}
-          <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-full px-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 z-10 text-[#2E4057] font-bold text-center">
-            <Image
-              src="/app.png"
-              alt="Phone Icon"
-              width={40}
-              height={40}
-              className="w-[24px] h-[24px] md:w-[40px] md:h-[40px]"
-            />
-            <h1 className="text-sm md:text-2xl break-words">08117892303</h1>
-          </div>
+          {/* Kontak Container */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4 flex flex-col items-center justify-center gap-6 z-10 text-[#2E4057] font-bold">
+            {/* Kontak 1 */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+              <a
+                href="https://wa.me/08117892303?text=Halo%20saya%20tertarik%20dengan%20layanan%20Anda"
+                target="_blank"
+                className="hover:rotate-7 transition-transform duration-200"
+              >
+                <Image
+                  src="/app.png"
+                  alt="Phone Icon"
+                  width={40}
+                  height={40}
+                  className="w-[24px] h-[24px] md:w-[40px] md:h-[40px]"
+                />
+              </a>
 
-          {/* Kontak 2 */}
-          <div className="absolute top-[58%] left-1/2 -translate-x-1/2 w-full px-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 z-10 text-[#2E4057] font-bold text-center">
-            <Image
-              src="/gmail.png"
-              alt="Email Icon"
-              width={40}
-              height={40}
-              className="w-[24px] h-[24px] md:w-[40px] md:h-[40px]"
-            />
-            <h1 className="text-sm md:text-2xl break-words">imeliadwinora@gmail.com</h1>
+              <a
+                href="https://wa.me/08117892303?text=Halo%20saya%20tertarik%20dengan%20layanan%20Anda"
+                target="_blank"
+              >
+                <h1 className="text-sm md:text-2xl break-words">08117892303</h1>
+              </a>
+            </div>
+
+            {/* Kontak 2 */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+              <a
+                href="https://wa.me/08117892303?text=Halo%20saya%20tertarik%20dengan%20layanan%20Anda"
+                target="_blank"
+                className="hover:rotate-7 transition-transform duration-200"
+              >
+                <Image
+                  src="/gmail.png"
+                  alt="Email Icon"
+                  width={40}
+                  height={40}
+                  className="w-[24px] h-[24px] md:w-[40px] md:h-[40px]"
+                />
+              </a>
+              <a
+                href="https://wa.me/08117892303?text=Halo%20saya%20tertarik%20dengan%20layanan%20Anda"
+                target="_blank"
+              >
+                <h1 className="text-sm md:text-2xl break-words">
+                  imeliadwinora@gmail.com
+                </h1>
+              </a>
+            </div>
           </div>
         </div>
       </div>

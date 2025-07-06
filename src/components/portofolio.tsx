@@ -35,7 +35,7 @@ export default function Portfolio() {
   return (
     <div
       id="portofolio"
-      className="flex flex-col items-center justify-center mt-10 text-center px-4 sm:px-6 md:px-8 lg:px-10"
+      className="flex flex-col items-center justify-center my-30 text-center px-4 sm:px-6 md:px-8 lg:px-10"
       data-aos="fade-up"
     >
       <h1 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#2E4057] font-extrabold [-webkit-text-stroke:0.5px_black] leading-tight">

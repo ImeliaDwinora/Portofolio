@@ -16,7 +16,7 @@ export default function AboutMe() {
   return (
     <div
       id="aboutme"
-      className="flex flex-col items-center justify-center m-auto text-center"
+      className="flex flex-col items-center justify-center my-30 text-center"
       data-aos="fade-up"
     >
       {/* Gambar bunga tanpa 'fill', ukuran responsif */}
@@ -51,12 +51,13 @@ export default function AboutMe() {
           <h2 className="text-3xl font-bold text-[#2E4057] mb-4 bg-[coral] rounded-2xl border border-black">
             Core Skills
           </h2>
-          <ul className="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] font-bold text-[#A679B4] [-webkit-text-stroke:0.1px_black]">
-            <li>✔ JavaScript / TypeScript</li>
-            <li>✔ React & Next.js</li>
-            <li>✔ Tailwind CSS</li>
-            <li>✔ Node.js & Express</li>
-            <li>✔ Python & Git</li>
+          <ul className="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[28px] font-bold text-[#A679B4] [-webkit-text-stroke:0.1px_black] mt-6">
+            <li className="flex items-center gap-2 justify-center">  <Image src="/java-script.png" alt="JS icon" width={24} height={24} /> JavaScript</li>
+            <li className="flex items-center gap-2 justify-center">  <Image src="/css3.png" alt="css icon" width={24} height={24} /> CSS</li>
+            <li className="flex items-center gap-2 justify-center">  <Image src="/git.png" alt="Git icon" width={24} height={24} /> Git</li>
+            <li className="flex items-center gap-2 justify-center">  <Image src="/python.png" alt="Python icon" width={24} height={24} /> Python </li>
+            <li className="flex items-center gap-2 justify-center">  <Image src="/python.png" alt="Python icon" width={24} height={24} /> Python </li>
+            <li className="flex items-center gap-2 justify-center">  <Image src="/python.png" alt="Python icon" width={24} height={24} /> Python </li>
           </ul>
         </div>
 
@@ -65,11 +66,11 @@ export default function AboutMe() {
           <h2 className="text-3xl font-bold text-[#2E4057] mb-4 bg-[coral] rounded-2xl border border-black">
             Key Values
           </h2>
-          <ul className="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] font-bold text-[#A679B4] [-webkit-text-stroke:0.1px_black]">
-            <li>✔ On-time delivery</li>
-            <li>✔ Attention to detail</li>
-            <li>✔ Clear communication</li>
-            <li>✔ Collaborative mindset</li>
+          <ul className="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] font-bold text-[#A679B4] [-webkit-text-stroke:0.1px_black] mt-15">
+            <li className="flex items-center gap-2 justify-center">  <Image src="/fast-time.png" alt="time" width={24} height={24} /> On-time delivery </li>
+            <li className="flex items-center gap-2 justify-center" > <Image src="/observation.png" alt="time" width={24} height={24} /> Attention to detail </li>
+            <li className="flex items-center gap-2 justify-center" > <Image src="/group.png" alt="time" width={24} height={24} /> Clear communication </li>
+            <li className="flex items-center gap-2 justify-center" > <Image src="/collaboration.png" alt="time" width={24} height={24} /> Collaborative mindset </li>
           </ul>
         </div>
       </div>

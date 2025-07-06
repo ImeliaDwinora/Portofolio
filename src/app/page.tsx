@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col justify-evenly items-center z-0 w-full relative h-[100vh]" >
+      <main className="flex flex-col justify-evenly items-center z-0 w-full relative min-h-screen" >
         <Hero/>
         <AboutMe/>
         <Skills/>

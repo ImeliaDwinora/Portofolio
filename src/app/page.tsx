@@ -1,11 +1,12 @@
-import AboutMe from "@/components/aboutme";
-import Contact from "@/components/contact";
-import Experiences from "@/components/experience";
-import Header from "@/components/header";
-import Hero from "@/components/hero";
-import Portofolio from "@/components/portofolio";
-import Skills from "@/components/skills";
-import Testimonial from "@/components/testimoni";
+import AboutMe from "./aboutme/page";
+import Header from "./header/page";
+import Hero from "./hero/page";
+import Skills from "./skills/page";
+import Portfolio from "./portofolio/page";
+import Experiences from "./experience/page";
+import TestimonialSlider from "./testimoni/page";
+import Contact from "./contact/page";
+
 
 
 export default function Home() {
@@ -16,9 +17,9 @@ export default function Home() {
         <Hero/>
         <AboutMe/>
         <Skills/>
-        <Portofolio/>
+        <Portfolio/>
         <Experiences/>
-        <Testimonial/>
+        <TestimonialSlider/>
         <Contact/>
       </main>
     </>

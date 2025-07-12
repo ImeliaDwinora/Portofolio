@@ -2,9 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { heroContent } from "@/constants/heroContent";
+import { useLanguageStore } from "@/stores/useLanguage";
 
 export default function Hero() {
   const [isAnimating, setIsAnimating] = useState(true);
+  const { language } = useLanguageStore();
+  const content = heroContent[language];
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -32,7 +36,7 @@ export default function Hero() {
     >
       {/* ✅ Perbaikan: tambahkan src awalan "/", dan tambahkan width + height */}
       <Image
-        src="/bg-hero.png"
+        src="/properties/bg-hero.png"
         alt="Background"
         width={1440}
         height={730}
@@ -46,9 +50,8 @@ export default function Hero() {
           p-4 sm:p-6 md:p-10 lg:p-20 
           bg-[#FFD166] h-auto lg:h-[530px] rounded-4xl border border-amber-950"
       >
-        {/* ✅ Perbaikan src dan tambahkan width + height */}
         <Image
-          src="/profile-pict.png"
+          src="/properties/profile-pict.png"
           alt="Profile Picture"
           width={400}
           height={400}
@@ -59,20 +62,19 @@ export default function Hero() {
 
         <div className="flex flex-col">
           <p className="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] font-bold text-[#A679B4] [-webkit-text-stroke:0.3px_black]">
-            Get to know me better 💁‍♀️!
+            {content.subtitle}
           </p>
           <h1 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold text-center text-[#2E4057] [-webkit-text-stroke:1px_black] leading-none mt-6">
             {waveText}
           </h1>
           <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-semibold text-[#A679B4] [-webkit-text-stroke:0.3px_black] mt-8">
-            Turning designs into interactive, accessible, and pixel-perfect web
-            experiences
+            {content.description}
           </p>
 
           <div className="flex flex-wrap overflow-visible sm:flex-row flex-col space-y-2 sm:space-y-0 items-center justify-center gap-3 mt-7 text-center">
             <a href="https://www.linkedin.com/">
               <Image
-                src="/linkedin.png"
+                src="/icons/linkedin.png"
                 alt="LinkedIn"
                 width={30}
                 height={30}
@@ -84,7 +86,7 @@ export default function Hero() {
             </p>
             <a href="mailto:imeliadwinora@gmail.com">
               <Image
-                src="/gmail.png"
+                src="/icons/gmail.png"
                 alt="Gmail"
                 width={30}
                 height={30}

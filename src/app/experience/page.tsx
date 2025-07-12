@@ -50,9 +50,11 @@ export default function Experiences() {
       className="flex flex-col items-center justify-center my-20 text-center gap-5"
       data-aos="fade-up"
     >
+      <section>
       <h2 className="text-[40px] md:text-[60px] text-[#2E4057] [-webkit-text-stroke:0.5px_black] leading-none mt-6 px-4">
         {content.title}
       </h2>
+      </section>
 
       <div className="flex flex-col md:flex-row items-center bg-[#FFD166] rounded-2xl border border-black p-6 md:p-20 mx-5 md:mx-20 mt-10 gap-8">
         <div className="relative w-[260px] h-[360px] md:w-[300px] md:h-[400px] mt-10">

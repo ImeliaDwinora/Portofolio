@@ -8,7 +8,7 @@ import { useLanguageStore } from "@/stores/useLanguage";
 
 export default function TestimonialSlider() {
   const [index, setIndex] = useState(0);
-  const { language } = useLanguageStore(); // misalnya: 'en' atau 'id'
+  const { language } = useLanguageStore(); 
 
   const testimonialList = testimonials[language] || testimonials["en"];
 
@@ -72,7 +72,6 @@ export default function TestimonialSlider() {
           </motion.div>
         </AnimatePresence>
 
-        {/* RIGHT BUTTON */}
         <button
           onClick={next}
           className="absolute right-2 sm:right-[-60px] top-1/2 -translate-y-1/2 bg-white border border-black p-2 rounded-full shadow z-10 hover:scale-110 transition"

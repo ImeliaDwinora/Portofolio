@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-type Language = "id" | "en";
+type Language = "en" | "id";
 
 interface LanguageStore {
   language: Language;
@@ -8,9 +8,9 @@ interface LanguageStore {
 }
 
 export const useLanguageStore = create<LanguageStore>((set) => ({
-  language: "id",
+  language: "en",
   toggleLanguage: () =>
     set((state) => ({
-      language: state.language === "id" ? "en" : "id",
+      language: state.language === "en" ? "id" : "en",
     })),
 }));

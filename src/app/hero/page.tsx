@@ -34,7 +34,6 @@ export default function Hero() {
       id="home"
       className="relative flex flex-col justify-center items-center z-0 w-full"
     >
-      {/* ✅ Perbaikan: tambahkan src awalan "/", dan tambahkan width + height */}
       <Image
         src="/properties/bg-hero.png"
         alt="Background"

@@ -39,29 +39,20 @@ export default function Skills() {
             className="w-full max-w-[150]px] h-auto animate-float"
           />
         </div>
-
-        {/* Skill Cards */}
         <div className="col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-12 mt-5">
-          {/* Front End */}
           <SkillCard
             title={content.sections.frontend.title}
             items={content.sections.frontend.items}
           />
-
-          {/* Back End */}
           <SkillCard
             title={content.sections.backend.title}
             items={content.sections.backend.items}
           />
-
-          {/* Dev Ops */}
           <SkillCard
             title={content.sections.devops.title}
             items={content.sections.devops.items}
           />
         </div>
-
-        {/* Right Flower */}
         <div className="col-span-1 flex justify-center">
           <Image
             src="/properties/flower-red-transparent.png"
@@ -76,7 +67,6 @@ export default function Skills() {
   );
 }
 
-// Card reusable component
 function SkillCard({
   title,
   items,

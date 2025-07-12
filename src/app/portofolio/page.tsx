@@ -17,8 +17,8 @@ const images = [
 
 export default function Portfolio() {
   const [index, setIndex] = useState(2);
-  const { language } = useLanguageStore(); // ambil bahasa aktif
-  const data = portfolioData[language]; // ambil data berdasarkan bahasa
+  const { language } = useLanguageStore(); 
+  const data = portfolioData[language]; 
 
   useEffect(() => {
     AOS.init({ duration: 2000, once: false });

@@ -11,7 +11,6 @@ export default function Header() {
 
   return (
     <>
-      {/* DESKTOP HEADER */}
       <header
         className="hidden sm:flex flex-row gap-7 flex-wrap justify-center items-center
         bg-[#FFF8DC] border-2 border-black mb-20
@@ -40,8 +39,6 @@ export default function Header() {
           {language === "id" ? "EN" : "ID"}
         </button>
       </header>
-
-      {/* MOBILE HEADER */}
       <header
         className="sm:hidden fixed top-2 left-2 z-20 
         bg-[#FFF8DC] border-2 border-black 

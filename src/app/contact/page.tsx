@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { contactContent } from "@/constants/contactContent";
 import { useLanguageStore } from "@/stores/useLanguage";
-import ContactFormModal from "../form/page";
+import ContactFormModal from "../component/contactform";
 
 
 export default function Contact() {
@@ -42,10 +42,10 @@ export default function Contact() {
             className="relative w-[300px] h-[300px] mx-auto md:w-[400px] md:h-[400px]"
           >
             <Image
-              src="/properties/contact.png"
+              src="/properties/contactme.png"
               alt="Contact Illustration"
               fill
-              className="object-contain rotate-[-7deg] hover:rotate-7 transition-transform duration-200 animate-float"
+              className="object-contain rotate-[-7deg] hover:rotate-7 transition-transform duration-200 animate-float cursor-pointer"
             />
           </button>
 

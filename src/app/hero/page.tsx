@@ -71,7 +71,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap overflow-visible sm:flex-row flex-col space-y-2 sm:space-y-0 items-center justify-center gap-3 mt-7 text-center">
-            <a href="https://www.linkedin.com/">
+            <a href="https://www.linkedin.com/in/imelia-dwinora-cahyati-785424312/">
               <Image
                 src="/icons/linkedin.png"
                 alt="LinkedIn"
